@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c86b0a7ad722a4449b55300579e435bd, type: 3}
+  m_Name: QuadTopLeft
+  m_EditorClassIdentifier: 
+  type: 1
+  center: {x: -13.1, y: 7.4}
+  radius: 8.04
+  size: {x: 25.5, y: 13.98}

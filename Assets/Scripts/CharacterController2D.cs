@@ -5,9 +5,11 @@ using UnityEngine;
 public class CharacterController2D : MonoBehaviour
 {
     public float speed = 5;
-    public float rotationSpeed = 180;
+    //public float rotationSpeed = 180;
     Rigidbody2D _rb2d;
-    float rotation = 0;
+    //float rotation = 0;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -17,16 +19,15 @@ public class CharacterController2D : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        _rb2d.velocity = (transform.up * Input.GetAxis("Vertical") * speed);// + Vector3.right * Input.GetAxis("Horizontal") * speed);
-        //if (_rb2d.velocity.magnitude > speed) _rb2d.velocity = _rb2d.velocity.normalized * speed;
-        rotation = _rb2d.rotation;
-        rotation += rotationSpeed * -Input.GetAxis("Horizontal") * Director.GetManager<TimeManager>().fixedDeltaTime;
-        _rb2d.SetRotation(rotation);
-        // transform.up = Vector3.ProjectOnPlane(Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position, transform.forward); ;
+
+        Vector2 direction = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+        if (direction.magnitude > 1) direction.Normalize();
+        transform.up = direction;
+        _rb2d.velocity = direction * speed;
+        //rotation = _rb2d.rotation;
+        //rotation += rotationSpeed * -Input.GetAxisRaw("Horizontal") * Director.GetManager<TimeManager>().fixedDeltaTime;
+
+        //_rb2d.SetRotation(Vector2.SignedAngle(Vector2.up, Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position));
     }
 
-    public void PickUpDirt()
-    {
-        Debug.Log("Pickup dirt");
-    }
 }

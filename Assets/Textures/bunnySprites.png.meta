@@ -1,0 +1,1072 @@
+fileFormatVersion: 2
+guid: aa55eaa321edec94f861276a5a5980ac
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7527609270102829469
+    second: bunnySprites_0
+  - first:
+      213: 6167490166647156638
+    second: bunnySprites_1
+  - first:
+      213: 2467319922852816872
+    second: bunnySprites_2
+  - first:
+      213: 1196471057819099268
+    second: bunnySprites_3
+  - first:
+      213: 2971085873324298068
+    second: bunnySprites_4
+  - first:
+      213: -1987183019212439440
+    second: bunnySprites_5
+  - first:
+      213: -9133737738303036742
+    second: bunnySprites_6
+  - first:
+      213: 4477619758296256225
+    second: bunnySprites_7
+  - first:
+      213: -1911857674136452083
+    second: bunnySprites_8
+  - first:
+      213: -3608805070945659712
+    second: bunnySprites_9
+  - first:
+      213: -7717241291951042683
+    second: bunnySprites_10
+  - first:
+      213: -8136063069619765388
+    second: bunnySprites_11
+  - first:
+      213: -3507469718499532926
+    second: bunnySprites_12
+  - first:
+      213: 6764131433650066001
+    second: bunnySprites_13
+  - first:
+      213: 8947898598297433296
+    second: bunnySprites_14
+  - first:
+      213: -5648371170025084371
+    second: bunnySprites_15
+  - first:
+      213: 14823331861402234
+    second: bunnySprites_16
+  - first:
+      213: -1178881386926164558
+    second: bunnySprites_17
+  - first:
+      213: 7460365950761916362
+    second: bunnySprites_18
+  - first:
+      213: 6035925936932716723
+    second: bunnySprites_19
+  - first:
+      213: -7956172633362720992
+    second: bunnySprites_20
+  - first:
+      213: -4175751101305176744
+    second: bunnySprites_21
+  - first:
+      213: -7207594025341732570
+    second: bunnySprites_22
+  - first:
+      213: -6399544548470275853
+    second: bunnySprites_23
+  - first:
+      213: -551338360478871341
+    second: bunnySprites_24
+  - first:
+      213: -3556764824828470032
+    second: bunnySprites_25
+  - first:
+      213: 9022550991880559946
+    second: bunnySprites_26
+  - first:
+      213: -4972133961728577425
+    second: bunnySprites_27
+  - first:
+      213: -888489694566473812
+    second: bunnySprites_28
+  - first:
+      213: -4509701671443387133
+    second: bunnySprites_29
+  - first:
+      213: 620735427763024562
+    second: bunnySprites_30
+  - first:
+      213: -7371578137853656821
+    second: bunnySprites_31
+  - first:
+      213: 410806444840339111
+    second: bunnySprites_32
+  - first:
+      213: 6395007189285640515
+    second: bunnySprites_33
+  - first:
+      213: -6349095562853526793
+    second: bunnySprites_34
+  - first:
+      213: 570789671121495201
+    second: bunnySprites_35
+  - first:
+      213: 1836801919841550516
+    second: bunnySprites_36
+  - first:
+      213: 3661013650903138007
+    second: bunnySprites_37
+  - first:
+      213: 465056185935925993
+    second: bunnySprites_38
+  - first:
+      213: 3825507704849247816
+    second: bunnySprites_39
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 25
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: bunnySprites_0
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 173
+        width: 25
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be4ead8c18410494f8d026c8a429bef8
+      internalID: -7527609270102829469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunnySprites_1
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 173
+        width: 26
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95044d280df7a01429357c09cf42d171
+      internalID: 6167490166647156638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunnySprites_2
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 173
+        width: 26
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9c76c4b90b41514bb8bd707be67933b
+      internalID: 2467319922852816872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunnySprites_3
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 173
+        width: 24
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 400e5ec56d59de94da4e1a9538ec0558
+      internalID: 1196471057819099268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunnySprites_4
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 173
+        width: 33
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f3506acd220e1e499cb4ac6e651a89f
+      internalID: 2971085873324298068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunnySprites_5
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 173
+        width: 38
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c92f0ef4dbde84c43a7807c84e69340c
+      internalID: -1987183019212439440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunnySprites_6
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 173
+        width: 32
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53c8cffa87a12f349800d3184038897e
+      internalID: -9133737738303036742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunnySprites_7
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 173
+        width: 33
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfb7d57a180acde4dbc49151c6b7ce27
+      internalID: 4477619758296256225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunnySprites_8
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 126
+        width: 30
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17ef2962b1dabe247a0a0a9cd6c3ccf0
+      internalID: -1911857674136452083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunnySprites_9
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 126
+        width: 33
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b07892f3b1a4af240b8ae56115c97b90
+      internalID: -3608805070945659712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunnySprites_10
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 126
+        width: 38
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9808233f52c567d44a0a7f36492d512f
+      internalID: -7717241291951042683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunnySprites_11
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 126
+        width: 42
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9a41d51aa8a5e1448ee4992bf56d520
+      internalID: -8136063069619765388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunnySprites_12
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 126
+        width: 42
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ca8dc0162030e04bb7bb27160953a8d
+      internalID: -3507469718499532926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunnySprites_13
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 126
+        width: 37
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11441a757e93adf4c90b0c39821b7993
+      internalID: 6764131433650066001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunnySprites_14
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 126
+        width: 32
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91d1ba170a259c7418ab17316814d080
+      internalID: 8947898598297433296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunnySprites_15
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 126
+        width: 30
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37cb434d3753f52459012709731ecf13
+      internalID: -5648371170025084371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunnySprites_16
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 87
+        width: 34
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a71189c6f74fca4b89d81c3dacf1f32
+      internalID: 14823331861402234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunnySprites_17
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 87
+        width: 35
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6bb16bd9c1094f4ab9c617e757ad5b4
+      internalID: -1178881386926164558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunnySprites_18
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 87
+        width: 35
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fea8febf9a96ae4886383276c87923c
+      internalID: 7460365950761916362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunnySprites_19
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 87
+        width: 38
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 120a7a47f45fc0145a66d8c58503c284
+      internalID: 6035925936932716723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunnySprites_20
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 87
+        width: 41
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb9a0fe9f549364428513337beb1df6c
+      internalID: -7956172633362720992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunnySprites_21
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 87
+        width: 39
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ef24a4f5de891d4bbe2fa0423fcb6ff
+      internalID: -4175751101305176744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunnySprites_22
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 87
+        width: 34
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 182bddb82b026644a85883711946e3ea
+      internalID: -7207594025341732570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunnySprites_23
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 87
+        width: 34
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 946ffc50d04c0484ba7a25a8e676e078
+      internalID: -6399544548470275853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunnySprites_24
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 47
+        width: 33
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64ec12b201bfadc498917f96e90cbabf
+      internalID: -551338360478871341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunnySprites_25
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 47
+        width: 32
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c7c42e4f78dc8e40ac61cb7e54bf497
+      internalID: -3556764824828470032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunnySprites_26
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 47
+        width: 38
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 174129af23692cc4eb9d87de0879054c
+      internalID: 9022550991880559946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunnySprites_27
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 47
+        width: 44
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 069953574ca4e514aaa501a3711ac5e5
+      internalID: -4972133961728577425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunnySprites_28
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 47
+        width: 41
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e2bcfcb79447e644b7ab798f97c8259
+      internalID: -888489694566473812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunnySprites_29
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 47
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a6b05a899b5f0546a3cca255f0c17da
+      internalID: -4509701671443387133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunnySprites_30
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 47
+        width: 40
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbcc092d018a5894da9244c718f234ce
+      internalID: 620735427763024562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunnySprites_31
+      rect:
+        serializedVersion: 2
+        x: 309
+        y: 47
+        width: 33
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03109d8009ed89d4a90750fb19c6da72
+      internalID: -7371578137853656821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunnySprites_32
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 7
+        width: 32
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8426208d1d5c6847818dd26d27a0bce
+      internalID: 410806444840339111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunnySprites_33
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 7
+        width: 32
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62933fee6a656c44dbf3163a62528183
+      internalID: 6395007189285640515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunnySprites_34
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 7
+        width: 38
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbe8cad783b12644a919a1ad9df782ae
+      internalID: -6349095562853526793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunnySprites_35
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 7
+        width: 28
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3acb66ee7e9adc74d85a95d7f459ef3a
+      internalID: 570789671121495201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunnySprites_36
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 7
+        width: 24
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efc790d69ce8d2a489b9a8adbb0ca2ff
+      internalID: 1836801919841550516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunnySprites_37
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 7
+        width: 26
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c2e187d15b8ce940b1a69e118aac96a
+      internalID: 3661013650903138007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunnySprites_38
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 7
+        width: 26
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bab461b48de8d5649973254e82042cc0
+      internalID: 465056185935925993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunnySprites_39
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 7
+        width: 30
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 423949ab5ed3afa43b7a4c25545f1593
+      internalID: 3825507704849247816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 47823e8fa3db1b848be74c4cd342cf03
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
