@@ -13,14 +13,23 @@ public class WaveController : MonoBehaviour
     public float timeBetweenParts = 1;
     public float timeBetweenEnemies = .1f;
 
+    public ScriptableEvent OnLastWaveClear;
+
+
     // Start is called before the first frame update
+
     IEnumerator Start()
     {
         Queue<Wave> waveQueue = new Queue<Wave>(waves);
 
         List<EnemyDuster> activeEnemies = new List<EnemyDuster>();
 
-        yield return new WaitForSeconds(timeBeforeStart);
+        float startTimer = timeBeforeStart;
+        while (startTimer > 0)
+        {
+            startTimer -= Director.GetManager<TimeManager>().deltaTime;
+            yield return new WaitForEndOfFrame();
+        }
         while (waveQueue.Count > 0)
         {
             //take first wave
@@ -41,19 +50,35 @@ public class WaveController : MonoBehaviour
                     };
                     if (!part.instant)
                     {
-                        yield return new WaitForSeconds(timeBetweenEnemies);
+                        float enemyTimer = timeBetweenEnemies;
+                        while (enemyTimer > 0)
+                        {
+                            enemyTimer -= Director.GetManager<TimeManager>().deltaTime;
+                            yield return new WaitForEndOfFrame();
+                        }
                     }
                 }
-                yield return new WaitForSeconds(timeBetweenParts);
+                float partTimer = timeBetweenEnemies;
+                while (partTimer > 0)
+                {
+                    partTimer -= Director.GetManager<TimeManager>().deltaTime;
+                    yield return new WaitForEndOfFrame();
+                }
             }
             while (activeEnemies.Count > 0)
             {
                 yield return new WaitForEndOfFrame();
             }
-
-            yield return new WaitForSeconds(timeBetweenWaves);
+            float waveTimer = timeBetweenWaves;
+            while (waveTimer > 0)
+            {
+                waveTimer -= Director.GetManager<TimeManager>().deltaTime;
+                yield return new WaitForEndOfFrame();
+            }
         }
+        OnLastWaveClear.Raise();
     }
+
 
 
 }

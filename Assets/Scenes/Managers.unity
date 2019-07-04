@@ -149,6 +149,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59f9a958e730fc9468a021a4cf17b6ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OnPauseEvent: {fileID: 11400000, guid: 94175b994ec5ddf4a8a3548177892498, type: 2}
+  OnUnpauseEvent: {fileID: 11400000, guid: b50a7ed7a8862b84f96d6e36a6cd0800, type: 2}
 --- !u!4 &235162039
 Transform:
   m_ObjectHideFlags: 0

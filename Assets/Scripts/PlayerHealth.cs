@@ -10,6 +10,7 @@ public class PlayerHealth : MonoBehaviour
     public float currentHealth { get; private set; }
 
     public ScriptableEvent OnPlayerHealthChanged;
+    public ScriptableEvent OnPlayerDeath;
 
     // Start is called before the first frame update
     void Start()
@@ -27,5 +28,9 @@ public class PlayerHealth : MonoBehaviour
     {
         currentHealth -= amount;
         OnPlayerHealthChanged.Raise();
+        if (currentHealth <= 0)
+        {
+            OnPlayerDeath.Raise();
+        }
     }
 }

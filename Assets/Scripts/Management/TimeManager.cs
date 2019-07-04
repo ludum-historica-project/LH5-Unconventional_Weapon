@@ -9,6 +9,8 @@ public class TimeManager : Manager
         Director.SubscribeManager(this);
     }
 
+    public ScriptableEvent OnPauseEvent;
+    public ScriptableEvent OnUnpauseEvent;
 
     public System.Action<bool> OnPauseToggle = (p) => { };
 
@@ -23,6 +25,8 @@ public class TimeManager : Manager
         {
             if (value != _paused)
             {
+                if (value) OnPauseEvent.Raise();
+                else OnUnpauseEvent.Raise();
                 _paused = value;
                 OnPauseToggle(value);
             }

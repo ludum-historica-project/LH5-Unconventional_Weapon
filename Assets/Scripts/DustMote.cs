@@ -17,20 +17,21 @@ public class DustMote : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (target)
-        {
-            transform.localScale *= .9f;
-            transform.position = Vector3.Lerp(transform.position, target.transform.position, .33333f);
-            if (transform.localScale.magnitude <= .05f)
+        if (!Director.GetManager<TimeManager>().Paused)
+            if (target)
             {
-                Destroy(gameObject);
+                transform.localScale *= .9f;
+                transform.position = Vector3.Lerp(transform.position, target.transform.position, .33333f);
+                if (transform.localScale.magnitude <= .05f)
+                {
+                    Destroy(gameObject);
+                }
             }
-        }
-        else
-        {
-            transform.localScale = Vector3.Lerp(transform.localScale, Vector3.one, .1f);
+            else
+            {
+                transform.localScale = Vector3.Lerp(transform.localScale, Vector3.one, .1f);
 
-        }
+            }
     }
 
     public void PickUp(DustPicker picker)

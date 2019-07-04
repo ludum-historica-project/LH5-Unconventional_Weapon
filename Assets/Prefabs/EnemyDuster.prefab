@@ -15,6 +15,8 @@ GameObject:
   - component: {fileID: 299734274558556384}
   - component: {fileID: 3399289326142996995}
   - component: {fileID: 5127686312060303345}
+  - component: {fileID: -4552922527241098034}
+  - component: {fileID: 3662093149503757501}
   m_Layer: 11
   m_Name: EnemyDuster
   m_TagString: Untagged
@@ -174,6 +176,86 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.54
+--- !u!114 &-4552922527241098034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 299734274558556385}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c2f8fb6e89b8d44f9ca71e9e0ab0b2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scriptableEvent: {fileID: 11400000, guid: 94175b994ec5ddf4a8a3548177892498, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3399289326142996995}
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 4255612033534617254}
+        m_MethodName: Pause
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &3662093149503757501
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 299734274558556385}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c2f8fb6e89b8d44f9ca71e9e0ab0b2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scriptableEvent: {fileID: 11400000, guid: b50a7ed7a8862b84f96d6e36a6cd0800, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3399289326142996995}
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 4255612033534617254}
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1001 &8106588240174484861
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -261,6 +343,12 @@ PrefabInstance:
 --- !u!4 &4255612033534617255 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5444460064381397978, guid: 11e85464b6d5fee478fa31d1418b8c87,
+    type: 3}
+  m_PrefabInstance: {fileID: 8106588240174484861}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &4255612033534617254 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 5444460064381397979, guid: 11e85464b6d5fee478fa31d1418b8c87,
     type: 3}
   m_PrefabInstance: {fileID: 8106588240174484861}
   m_PrefabAsset: {fileID: 0}

@@ -10,6 +10,7 @@ public static class Director
     {
         managers = new Dictionary<string, Manager>();
         SceneManager.LoadScene("Managers", LoadSceneMode.Additive);
+
     }
 
     public static T GetManager<T>() where T : Manager
