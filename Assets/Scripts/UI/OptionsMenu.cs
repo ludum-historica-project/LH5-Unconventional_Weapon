@@ -73,6 +73,11 @@ public class OptionsMenu : MonoBehaviour
                 return;
             }
         }
+        if (Input.GetAxis("AnyJoystickAxis") > 0)
+        {
+            selectables[0].Select();
+            return;
+        }
         for (int i = 0; i < 20; i++)
         {
             if (Input.GetKeyDown("joystick 1 button " + i))

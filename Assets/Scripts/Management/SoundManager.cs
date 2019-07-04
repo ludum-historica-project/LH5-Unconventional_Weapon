@@ -66,6 +66,8 @@ public class SoundManager : Manager
 
     float LinearToDB(float linear)
     {
+        
+        linear = Mathf.Clamp(linear, 0.001f, 1);
         return Mathf.Log(linear, 5) * 20;
     }
 

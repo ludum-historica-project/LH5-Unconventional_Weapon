@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _value: {fileID: 8300000, guid: d7e9b3a066e147942b9998817b9a3eb4, type: 3}
   volume: 1
-  loop: 0
+  loop: 1
   mixerGroup: {fileID: 2499246430160348778, guid: b2d3c397be4d1944eb4b24700d6a7c97,
     type: 2}
   pitch: 1

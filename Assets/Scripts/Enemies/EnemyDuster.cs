@@ -53,6 +53,7 @@ public class EnemyDuster : Enemy
         {
             Destroy(gameObject);
             Director.GetManager<ScoreManager>().AddScore(5);
+            OnEnemyDeathEvent.Raise();
         }
         if (collision.collider.GetComponent<PlayerHealth>())
         {
@@ -65,6 +66,5 @@ public class EnemyDuster : Enemy
     private void OnDestroy()
     {
         OnKill();
-        OnEnemyDeathEvent.Raise();
     }
 }

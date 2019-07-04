@@ -27,8 +27,8 @@ public class WaveArea : ScriptableObject
                 Vector2 point = new Vector2(Random.Range(-size.x, size.x), Random.Range(-size.y, size.y)) / 2;
                 if (edge)
                 {
-                    Vector2 verticalExtreme = (point / point.y) * size.y / 2;
-                    Vector2 horizontalExtreme = (point / point.x) * size.x / 2;
+                    Vector2 verticalExtreme = (point / Mathf.Abs(point.y)) * size.y / 2;
+                    Vector2 horizontalExtreme = (point / Mathf.Abs(point.x)) * size.x / 2;
                     pos = center + (verticalExtreme.magnitude > horizontalExtreme.magnitude ? horizontalExtreme : verticalExtreme);
                 }
                 else
@@ -40,6 +40,34 @@ public class WaveArea : ScriptableObject
                 break;
         }
         return pos;
+    }
+
+    public List<Vector2> GetOrderedPoints(int pointCount)
+    {
+        List<Vector2> points = new List<Vector2>();
+        for (int i = 0; i < pointCount; i++)
+        {
+            Vector2 position = Quaternion.AngleAxis(i * 360f / pointCount, Vector3.forward) * Vector3.up;
+
+
+            switch (type)
+            {
+                case AreaType.Circle:
+                    position *= radius;
+                    break;
+                case AreaType.Rectangle:
+                    Vector2 verticalExtreme = (position / Mathf.Abs(position.y)) * size.y / 2;
+                    Vector2 horizontalExtreme = (position / Mathf.Abs(position.x)) * size.x / 2;
+                    position = (verticalExtreme.magnitude > horizontalExtreme.magnitude ? horizontalExtreme : verticalExtreme);
+                    break;
+                default:
+                    break;
+            }
+            position += center;
+            points.Add(position);
+        }
+
+        return points;
     }
 
 }

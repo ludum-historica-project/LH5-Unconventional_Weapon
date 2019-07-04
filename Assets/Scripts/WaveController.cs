@@ -13,17 +13,25 @@ public class WaveController : MonoBehaviour
     public float timeBetweenParts = 1;
     public float timeBetweenEnemies = .1f;
 
+    public ScriptableEvent OnNextWaveReady;
     public ScriptableEvent OnLastWaveClear;
 
-
+    public Wave nextWave { get; private set; }
     // Start is called before the first frame update
 
     IEnumerator Start()
     {
+        yield return new WaitForEndOfFrame();
         Queue<Wave> waveQueue = new Queue<Wave>(waves);
         List<EnemySpawner> activeSpawners = new List<EnemySpawner>();
 
         List<EnemyDuster> activeEnemies = new List<EnemyDuster>();
+
+        if (waveQueue.Count > 0)
+        {
+            nextWave = waveQueue.Peek();
+            OnNextWaveReady.Raise();
+        }
 
         float startTimer = timeBeforeStart;
         while (startTimer > 0)
@@ -39,11 +47,24 @@ public class WaveController : MonoBehaviour
             //run through all the wave parts
             foreach (var part in currentWave.parts)
             {
+                Queue<Vector2> positionQueue = new Queue<Vector2>();
+                if (part.ordered)
+                {
+                    positionQueue = new Queue<Vector2>(part.area.GetOrderedPoints(part.enemyCount));
+                }
+                else
+                {
+                    for (int i = 0; i < part.enemyCount; i++)
+                    {
+                        positionQueue.Enqueue(part.area.GetRandomPoint(part.edge));
+                    }
+                }
+
                 //spawn all enemies as intended
                 for (int i = 0; i < part.enemyCount; i++)
                 {
                     //add all enemies to a list of enemies
-                    var spawner = Instantiate(spawnerPrefab, part.area.GetRandomPoint(part.edge), Quaternion.identity);
+                    var spawner = Instantiate(spawnerPrefab, positionQueue.Dequeue(), Quaternion.identity);
                     spawner.StartCount(2);
                     activeSpawners.Add(spawner);
                     spawner.OnEnemySpawn += (enemy) =>
@@ -75,6 +96,11 @@ public class WaveController : MonoBehaviour
             while (activeEnemies.Count > 0 || activeSpawners.Count > 0)
             {
                 yield return new WaitForEndOfFrame();
+            }
+            if (waveQueue.Count > 0)
+            {
+                nextWave = waveQueue.Peek();
+                OnNextWaveReady.Raise();
             }
             float waveTimer = timeBetweenWaves;
             while (waveTimer > 0)

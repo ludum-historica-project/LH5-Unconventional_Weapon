@@ -7,7 +7,8 @@ public class DirtyFloor : MonoBehaviour
     public DustMote dirtPacketPrefab;
     //public Vector2 size;
     public int dustCount;
-    public float radius;
+    public float innerRadius;
+    public float outerRadius;
 
 
 
@@ -51,12 +52,13 @@ public class DirtyFloor : MonoBehaviour
     public Vector3 GetPointWithinLimits()
     {
         //return new Vector3(Random.Range(-size.x, size.x), Random.Range(-size.y, size.y)) / 2;
-        return Quaternion.AngleAxis(Random.Range(0, 360), Vector3.forward) * Vector3.up * Mathf.Pow(Random.Range(0f, 1), 5) * radius;
+        return Quaternion.AngleAxis(Random.Range(0, 360), Vector3.forward) * Vector3.up * Mathf.Pow(Random.Range(innerRadius, outerRadius) / outerRadius, 5) * outerRadius;
     }
 
     private void OnDrawGizmos()
     {
         //Gizmos.DrawWireCube(transform.position, size);
-        Gizmos.DrawWireSphere(transform.position, radius);
+        Gizmos.DrawWireSphere(transform.position, innerRadius);
+        Gizmos.DrawWireSphere(transform.position, outerRadius);
     }
 }

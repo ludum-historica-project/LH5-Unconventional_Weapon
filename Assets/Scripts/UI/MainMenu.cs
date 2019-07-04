@@ -25,6 +25,11 @@ public class MainMenu : UIWindow
                 return;
             }
         }
+        if (Input.GetAxis("AnyJoystickAxis") > 0)
+        {
+            buttons[0].Select();
+            return;
+        }
         for (int i = 0; i < 20; i++)
         {
             if (Input.GetKeyDown("joystick 1 button " + i))
