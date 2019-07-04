@@ -20,10 +20,10 @@ public class SoundManager : Manager
     private void Start()
     {
         masterVolume = PlayerPrefs.GetFloat("MasterVolume", 1);
-        musicVolume = PlayerPrefs.GetFloat("MasterVolume", 1);
+        musicVolume = PlayerPrefs.GetFloat("MusicVolume", 1);
         soundsVolume = PlayerPrefs.GetFloat("SoundsVolume", 1);
 
-        SetMasterVolumeScalar(soundsVolume);
+        SetMasterVolumeScalar(masterVolume);
         SetMusicVolumeScalar(musicVolume);
         SetSoundsVolumeScalar(soundsVolume);
     }
@@ -61,41 +61,33 @@ public class SoundManager : Manager
         _usedSources.Add(source);
         source.gameObject.name = "Sound: " + sound.name;
         AssignSoundToSource(source, sound);
-        source.Play();        
+        source.Play();
     }
 
-    public void SetMasterVolumeDB(float vol)
+    float LinearToDB(float linear)
     {
-        master.SetFloat("MasterVolume", vol);
+        return Mathf.Log(linear, 5) * 20;
     }
 
     public void SetMasterVolumeScalar(float vol)
     {
-        SetMasterVolumeDB((Mathf.Sqrt(vol) - 1) * 80);
         PlayerPrefs.SetFloat("MasterVolume", vol);
-        soundsVolume = vol;
-    }
-
-    public void SetMusicVolumeDB(float vol)
-    {
-        master.SetFloat("MusicVolume", vol);
+        master.SetFloat("MasterVolume", LinearToDB(vol));
+        masterVolume = vol;
     }
 
     public void SetMusicVolumeScalar(float vol)
     {
-        SetMusicVolumeDB((Mathf.Sqrt(vol) - 1) * 80);
         PlayerPrefs.SetFloat("MusicVolume", vol);
-        soundsVolume = vol;
+        master.SetFloat("MusicVolume", LinearToDB(vol));
+        musicVolume = vol;
     }
-    public void SetSoundsVolumeDB(float vol)
-    {
-        master.SetFloat("SoundsVolume", vol);
-    }
+
 
     public void SetSoundsVolumeScalar(float vol)
     {
-        SetSoundsVolumeDB((Mathf.Sqrt(vol) - 1) * 80);
         PlayerPrefs.SetFloat("SoundsVolume", vol);
+        master.SetFloat("SoundsVolume", LinearToDB(vol));
         soundsVolume = vol;
     }
 

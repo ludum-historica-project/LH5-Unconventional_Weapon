@@ -115,7 +115,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83ddeb8c427a8cb49b438f1fa7787e0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  motePrefab: {fileID: 1870616945198830024, guid: bf2de2488a467b84484c9171273c85fe,
+  impactParticle: {fileID: 7528921528028689407, guid: a819d3ea999a1cf4c8452d72dd161e4b,
     type: 3}
   speed: 30
 --- !u!60 &234650722406360655

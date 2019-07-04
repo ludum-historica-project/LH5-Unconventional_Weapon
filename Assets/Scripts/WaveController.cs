@@ -6,7 +6,7 @@ public class WaveController : MonoBehaviour
 {
     public List<Wave> waves;
 
-    public EnemyDuster dusterPrefab;
+    public EnemySpawner spawnerPrefab;
 
     public float timeBeforeStart = 5;
     public float timeBetweenWaves = 3;
@@ -21,6 +21,7 @@ public class WaveController : MonoBehaviour
     IEnumerator Start()
     {
         Queue<Wave> waveQueue = new Queue<Wave>(waves);
+        List<EnemySpawner> activeSpawners = new List<EnemySpawner>();
 
         List<EnemyDuster> activeEnemies = new List<EnemyDuster>();
 
@@ -42,12 +43,18 @@ public class WaveController : MonoBehaviour
                 for (int i = 0; i < part.enemyCount; i++)
                 {
                     //add all enemies to a list of enemies
-                    var enemy = Instantiate(dusterPrefab, part.area.GetRandomPoint(part.edge), Quaternion.identity);
-                    activeEnemies.Add(enemy);
-                    enemy.OnKill = () =>
-                    {
-                        activeEnemies.Remove(enemy);
-                    };
+                    var spawner = Instantiate(spawnerPrefab, part.area.GetRandomPoint(part.edge), Quaternion.identity);
+                    spawner.StartCount(2);
+                    activeSpawners.Add(spawner);
+                    spawner.OnEnemySpawn += (enemy) =>
+                      {
+                          activeSpawners.Remove(spawner);
+                          activeEnemies.Add(enemy);
+                          enemy.OnKill = () =>
+                          {
+                              activeEnemies.Remove(enemy);
+                          };
+                      };
                     if (!part.instant)
                     {
                         float enemyTimer = timeBetweenEnemies;
@@ -65,7 +72,7 @@ public class WaveController : MonoBehaviour
                     yield return new WaitForEndOfFrame();
                 }
             }
-            while (activeEnemies.Count > 0)
+            while (activeEnemies.Count > 0 || activeSpawners.Count > 0)
             {
                 yield return new WaitForEndOfFrame();
             }

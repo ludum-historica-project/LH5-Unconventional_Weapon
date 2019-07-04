@@ -4,7 +4,7 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 public class DustBullet : MonoBehaviour
 {
-    public DustMote motePrefab;
+    public ParticleSystem impactParticle;
     public float speed = 10;
 
     Rigidbody2D _rb2d;
@@ -22,10 +22,9 @@ public class DustBullet : MonoBehaviour
 
     public void OnCollisionEnter2D(Collision2D collision)
     {
-        if (Random.Range(0f, 1) > .75f)
-        {
-            Instantiate(motePrefab, transform.position, Quaternion.identity).transform.localScale = Vector3.zero;
-        }
+
+        Instantiate(impactParticle, transform.position, Quaternion.identity);
+
         Destroy(gameObject);
     }
 }
