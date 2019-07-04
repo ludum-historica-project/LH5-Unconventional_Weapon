@@ -11,6 +11,8 @@ public class EnemyDuster : Enemy
 
     public System.Action OnKill = () => { };
 
+    public ScriptableEvent OnEnemyDeathEvent;
+
     //float _currentTargetUpdateCooldown = 0;
 
     //Vector3 _currentTarget;
@@ -63,5 +65,6 @@ public class EnemyDuster : Enemy
     private void OnDestroy()
     {
         OnKill();
+        OnEnemyDeathEvent.Raise();
     }
 }

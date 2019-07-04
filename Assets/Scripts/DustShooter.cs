@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class DustShooter : MonoBehaviour
 {
+    public ScriptableEvent OnShootEvent;
+
     public DustController dustController;
 
     public DustBullet bulletPrefab;
@@ -48,6 +50,7 @@ public class DustShooter : MonoBehaviour
 
     void ShootBullet(Vector2 direction)
     {
+        OnShootEvent.Raise();
         Instantiate(bulletPrefab, transform.position, Quaternion.identity).transform.up = direction;
     }
 }

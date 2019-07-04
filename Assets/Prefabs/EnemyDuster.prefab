@@ -140,6 +140,7 @@ MonoBehaviour:
   targetUpdateCooldown: 5
   motePrefab: {fileID: 1870616945198830024, guid: bf2de2488a467b84484c9171273c85fe,
     type: 3}
+  OnEnemyDeathEvent: {fileID: 11400000, guid: 1e7340b8aae3b8b4482c0a7a2fdf034b, type: 2}
   dustDropDistanceThreshold: 3
 --- !u!95 &3399289326142996995
 Animator:

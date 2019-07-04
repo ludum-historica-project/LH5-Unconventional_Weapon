@@ -23,10 +23,6 @@ public class EnemyMovement : MonoBehaviour
     {
         Vector3 direction = (destination - transform.position).normalized;
         Vector3 movement = direction * speed;
-        if (movement.magnitude > Vector3.Distance(destination, transform.position))
-        {
-            movement = movement.normalized * Vector3.Distance(destination, transform.position);
-        }
         _rb2d.velocity = Vector3.Slerp(_rb2d.velocity, movement, .33333f);
     }
 }

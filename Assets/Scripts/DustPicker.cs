@@ -5,10 +5,12 @@ using UnityEngine;
 public class DustPicker : MonoBehaviour
 {
     public DustController dustController;
+    public ScriptableEvent OnDustPickedUpEvent;
 
     public void PickUpDust(DustMote pocket)
     {
-            dustController.PickupDust(pocket.dustValue);
+        OnDustPickedUpEvent.Raise();
+        dustController.PickupDust(pocket.dustValue);
         pocket.PickUp(this);
     }
 
