@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fb6f48addad17c14eaa51c7c3228aab9, type: 3}
-  m_Name: Wave 11
+  m_Name: Wave 12
   m_EditorClassIdentifier: 
   parts:
-  - area: {fileID: 11400000, guid: ab939ef952bdc724093f367e5bd8af23, type: 2}
+  - area: {fileID: 11400000, guid: 38e290e0e6f939945891b7aac48eb3ec, type: 2}
     enemyCount: 20
     instant: 0
     ordered: 0

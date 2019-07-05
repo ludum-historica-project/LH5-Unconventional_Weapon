@@ -13,6 +13,7 @@ public class Wave : ScriptableObject
         public bool instant; //if instant, all enemies appear at once
         public bool ordered; // if ordered, all enemies will appear following a clockwise order
         public bool edge; // will only appear on edge of area;
+        public bool followPlayer; //will use the player as the center of the area
     }
 
     public List<WavePart> parts;

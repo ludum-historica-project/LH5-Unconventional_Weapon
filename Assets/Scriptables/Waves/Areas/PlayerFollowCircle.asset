@@ -9,13 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb6f48addad17c14eaa51c7c3228aab9, type: 3}
-  m_Name: Wave 11
+  m_Script: {fileID: 11500000, guid: c86b0a7ad722a4449b55300579e435bd, type: 3}
+  m_Name: PlayerFollowCircle
   m_EditorClassIdentifier: 
-  parts:
-  - area: {fileID: 11400000, guid: ab939ef952bdc724093f367e5bd8af23, type: 2}
-    enemyCount: 20
-    instant: 0
-    ordered: 0
-    edge: 0
-    followPlayer: 0
+  type: 0
+  center: {x: 0, y: 0}
+  radius: 3
+  size: {x: 0, y: 0}

@@ -4,17 +4,23 @@ using UnityEngine;
 
 public class WaveController : MonoBehaviour
 {
+
+    public WaveArea boundaries;
+
     public List<Wave> waves;
 
     public EnemySpawner spawnerPrefab;
 
     public float timeBeforeStart = 5;
     public float timeBetweenWaves = 3;
-    public float timeBetweenParts = 1;
     public float timeBetweenEnemies = .1f;
 
     public ScriptableEvent OnNextWaveReady;
     public ScriptableEvent OnLastWaveClear;
+
+    public CharacterController2D player;
+
+    public int startFromWave = 0;
 
     public Wave nextWave { get; private set; }
     // Start is called before the first frame update
@@ -22,7 +28,11 @@ public class WaveController : MonoBehaviour
     IEnumerator Start()
     {
         yield return new WaitForEndOfFrame();
-        Queue<Wave> waveQueue = new Queue<Wave>(waves);
+        Queue<Wave> waveQueue = new Queue<Wave>();
+        for (int i = startFromWave; i < waves.Count; i++)
+        {
+            waveQueue.Enqueue(waves[i]);
+        }
         List<EnemySpawner> activeSpawners = new List<EnemySpawner>();
 
         List<EnemyDuster> activeEnemies = new List<EnemyDuster>();
@@ -59,12 +69,13 @@ public class WaveController : MonoBehaviour
                         positionQueue.Enqueue(part.area.GetRandomPoint(part.edge));
                     }
                 }
-
                 //spawn all enemies as intended
                 for (int i = 0; i < part.enemyCount; i++)
                 {
+                    Vector2 position = boundaries.ClampToBoundary(positionQueue.Dequeue());
+                    if (part.followPlayer) position += (Vector2)player.transform.position;
                     //add all enemies to a list of enemies
-                    var spawner = Instantiate(spawnerPrefab, positionQueue.Dequeue(), Quaternion.identity);
+                    var spawner = Instantiate(spawnerPrefab, position, Quaternion.identity);
                     spawner.StartCount(2);
                     activeSpawners.Add(spawner);
                     spawner.OnEnemySpawn += (enemy) =>
@@ -111,7 +122,6 @@ public class WaveController : MonoBehaviour
         }
         OnLastWaveClear.Raise();
     }
-
 
 
 }

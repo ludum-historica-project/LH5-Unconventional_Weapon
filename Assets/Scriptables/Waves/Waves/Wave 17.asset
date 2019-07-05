@@ -10,12 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fb6f48addad17c14eaa51c7c3228aab9, type: 3}
-  m_Name: Wave 11
+  m_Name: Wave 17
   m_EditorClassIdentifier: 
   parts:
-  - area: {fileID: 11400000, guid: ab939ef952bdc724093f367e5bd8af23, type: 2}
+  - area: {fileID: 11400000, guid: 86ad8e9f66790374b9326f4184b0cd45, type: 2}
     enemyCount: 20
     instant: 0
-    ordered: 0
-    edge: 0
+    ordered: 1
+    edge: 1
+    followPlayer: 0
+  - area: {fileID: 11400000, guid: 6fa1dc44574d33146b8ad79bed95e6c7, type: 2}
+    enemyCount: 20
+    instant: 0
+    ordered: 1
+    edge: 1
     followPlayer: 0

@@ -2793,6 +2793,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d913bd421bedfb54f906544cf700294b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boundaries: {fileID: 11400000, guid: 7a0b28ed12121a3438f348885371a526, type: 2}
   waves:
   - {fileID: 11400000, guid: 44c1eb19c485fe44eb61c22a396f7735, type: 2}
   - {fileID: 11400000, guid: dde851887fb6c824399b607e97dfab3c, type: 2}
@@ -2803,17 +2804,26 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 400af0892b98b3f44ae52a3839ad6784, type: 2}
   - {fileID: 11400000, guid: 0d41abc3d8a0d1d48bcf8213199f388f, type: 2}
   - {fileID: 11400000, guid: a7d08887bed459943bdba44fbd43de32, type: 2}
+  - {fileID: 11400000, guid: 44782d53807fccc408f2c1fb92ab659f, type: 2}
   - {fileID: 11400000, guid: 87c3e382367ecfd4ead4dd12b46805bf, type: 2}
   - {fileID: 11400000, guid: bf1e475c98ae8384ab8fcc479c9931ea, type: 2}
-  - {fileID: 11400000, guid: 44782d53807fccc408f2c1fb92ab659f, type: 2}
+  - {fileID: 11400000, guid: 32d15a653aeda5641a853948021b0f31, type: 2}
+  - {fileID: 11400000, guid: 01842531711ed5a46bfe4bb1092edd8f, type: 2}
+  - {fileID: 11400000, guid: fd43bc675f3d42e469381cee628942e0, type: 2}
+  - {fileID: 11400000, guid: 26977a46dd7cc814a8b4c5f89b2cd41a, type: 2}
+  - {fileID: 11400000, guid: 126f093f6827be049bdeff972e6a3d65, type: 2}
+  - {fileID: 11400000, guid: e67dbacea8eb3ba46a63484e3a4054f4, type: 2}
+  - {fileID: 11400000, guid: 84beea68685559d43b465a2aae44d2b9, type: 2}
+  - {fileID: 11400000, guid: 66fa4c02575586544abc4b2671125018, type: 2}
   spawnerPrefab: {fileID: 4982524167686463997, guid: c214cc2f52c87a649acd60c846480a0a,
     type: 3}
   timeBeforeStart: 5
   timeBetweenWaves: 3
-  timeBetweenParts: 1
   timeBetweenEnemies: 0.1
   OnNextWaveReady: {fileID: 11400000, guid: 6894bb0fbce9c164f9257e41fb61f809, type: 2}
   OnLastWaveClear: {fileID: 11400000, guid: eb8a1789417c21848877eec3e09b2da1, type: 2}
+  player: {fileID: 1983621970}
+  startFromWave: 15
 --- !u!4 &1780091051
 Transform:
   m_ObjectHideFlags: 0

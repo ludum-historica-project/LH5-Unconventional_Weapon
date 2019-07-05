@@ -70,4 +70,27 @@ public class WaveArea : ScriptableObject
         return points;
     }
 
+
+    public Vector2 ClampToBoundary(Vector2 input)
+    {
+        switch (type)
+        {
+            case AreaType.Circle:
+                if (input.magnitude > radius)
+                {
+                    return input.normalized * radius;
+                }
+                break;
+            case AreaType.Rectangle:
+                if (input.x > size.x / 2) input.x = size.x / 2;
+                if (input.x < -size.x / 2) input.x = -size.x / 2;
+                if (input.y > size.y / 2) input.y = size.y / 2;
+                if (input.y < -size.y / 2) input.y = -size.y / 2;
+                break;
+            default:
+                break;
+        }
+        return input;
+    }
+
 }

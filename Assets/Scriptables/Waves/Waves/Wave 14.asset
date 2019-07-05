@@ -10,11 +10,29 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fb6f48addad17c14eaa51c7c3228aab9, type: 3}
-  m_Name: Wave 11
+  m_Name: Wave 14
   m_EditorClassIdentifier: 
   parts:
   - area: {fileID: 11400000, guid: ab939ef952bdc724093f367e5bd8af23, type: 2}
-    enemyCount: 20
+    enemyCount: 10
+    instant: 0
+    ordered: 0
+    edge: 0
+    followPlayer: 0
+  - area: {fileID: 11400000, guid: 5bac25713ea2054488923aeb551622af, type: 2}
+    enemyCount: 10
+    instant: 0
+    ordered: 0
+    edge: 0
+    followPlayer: 0
+  - area: {fileID: 11400000, guid: ab939ef952bdc724093f367e5bd8af23, type: 2}
+    enemyCount: 10
+    instant: 0
+    ordered: 0
+    edge: 0
+    followPlayer: 0
+  - area: {fileID: 11400000, guid: 5bac25713ea2054488923aeb551622af, type: 2}
+    enemyCount: 10
     instant: 0
     ordered: 0
     edge: 0
