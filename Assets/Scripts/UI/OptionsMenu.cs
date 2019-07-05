@@ -4,31 +4,29 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
-public class OptionsMenu : MonoBehaviour
+public class OptionsMenu : UIWindow
 {
-    public List<Selectable> selectables = new List<Selectable>();
 
     public Slider masterVolumeSlider;
     public Slider musicVolumeSlider;
     public Slider soundVolumeSlider;
 
-    public System.Action OnClose = () => { };
-    bool pressingCancelOnPreviousframe = true;
+
     private void OnEnable()
     {
         Director.GetManager<TimeManager>().Paused = true;
     }
 
-    private void OnDisable()
+    protected override void OnDisable()
     {
+        base.OnDisable();
         Director.GetManager<TimeManager>().Paused = false;
-        OnClose();
     }
 
     // Start is called before the first frame update
-    void Start()
+    protected override void Start()
     {
-        selectables = new List<Selectable>(GetComponentsInChildren<Selectable>());
+        base.Start();
 
         masterVolumeSlider.value = Director.GetManager<SoundManager>().masterVolume;
         masterVolumeSlider.onValueChanged.AddListener(UpdateMasterVolume);
@@ -55,39 +53,6 @@ public class OptionsMenu : MonoBehaviour
         Director.GetManager<SoundManager>().SetSoundsVolumeScalar(value);
     }
 
-    // Update is called once per frame
-    private void Update()
-    {
-        RefocusForJoystick();
-        if (!pressingCancelOnPreviousframe && Input.GetAxis("Cancel") > 0) Return();
-        pressingCancelOnPreviousframe = Input.GetAxis("Cancel") > 0;
-    }
-
-    void RefocusForJoystick()
-    {
-        if (selectables.Count == 0) return;
-        foreach (var selectable in selectables)
-        {
-            if (EventSystem.current.currentSelectedGameObject == selectable.gameObject)
-            {
-                return;
-            }
-        }
-        if (Input.GetAxis("AnyJoystickAxis") > 0)
-        {
-            selectables[0].Select();
-            return;
-        }
-        for (int i = 0; i < 20; i++)
-        {
-            if (Input.GetKeyDown("joystick 1 button " + i))
-            {
-                selectables[0].Select();
-            }
-        }
-    }
-
-
     public void Return()
     {
         gameObject.SetActive(false);
@@ -101,5 +66,10 @@ public class OptionsMenu : MonoBehaviour
     public void QuitToDesktop()
     {
         Application.Quit();
+    }
+
+    protected override void OnInputDevicePress(bool isJoystick)
+    {
+        //throw new System.NotImplementedException();
     }
 }

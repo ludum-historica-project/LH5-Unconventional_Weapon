@@ -13,7 +13,7 @@ public class GameplayUI : MonoBehaviour
 
     int targetScoreCount;
     float currentScoreCount;
-    bool optionsOpen;
+    bool windowOpen;
 
     bool pressingCancelOnPreviousframe = true;
     public void ScoreUpdate()
@@ -25,12 +25,12 @@ public class GameplayUI : MonoBehaviour
     {
         currentScoreCount = (Mathf.Lerp(currentScoreCount, targetScoreCount, .1f));
         scoreCounter.text = ((int)currentScoreCount).ToString();
-        if (!optionsOpen)
+        if (!windowOpen)
         {
 
             if (!pressingCancelOnPreviousframe && Input.GetAxis("Cancel") > 0)
             {
-                optionsOpen = true;
+                windowOpen = true;
                 optionsMenu.gameObject.SetActive(true);
                 optionsMenu.OnClose += OnOptionsClose;
             }
@@ -41,12 +41,14 @@ public class GameplayUI : MonoBehaviour
     void OnOptionsClose()
     {
         optionsMenu.OnClose -= OnOptionsClose;
-        optionsOpen = false;
+        windowOpen = false;
     }
 
     public void ShowGameOver(bool win)
     {
+        optionsMenu.gameObject.SetActive(false);
         gameOverScreen.gameObject.SetActive(true);
+        windowOpen = true;
         gameOverText.text = win ? "You win!" : "You lose";
         gameOverText.text += "\r\nYour score: " + targetScoreCount;
         Director.GetManager<TimeManager>().Paused = true;

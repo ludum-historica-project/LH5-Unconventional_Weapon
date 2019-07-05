@@ -8,36 +8,14 @@ public class MainMenu : UIWindow
 {
     public List<Button> buttons = new List<Button>();
     public OptionsMenu options;
+    public HowToPlayWindow howToPlay;
     bool focused = true;
-    private void Update()
+    protected override void Update()
     {
         if (focused)
             RefocusForJoystick();
     }
 
-    void RefocusForJoystick()
-    {
-        if (buttons.Count == 0) return;
-        foreach (var button in buttons)
-        {
-            if (EventSystem.current.currentSelectedGameObject == button.gameObject)
-            {
-                return;
-            }
-        }
-        if (Input.GetAxis("AnyJoystickAxis") > 0)
-        {
-            buttons[0].Select();
-            return;
-        }
-        for (int i = 0; i < 20; i++)
-        {
-            if (Input.GetKeyDown("joystick 1 button " + i))
-            {
-                buttons[0].Select();
-            }
-        }
-    }
 
     public void Play()
     {
@@ -52,16 +30,28 @@ public class MainMenu : UIWindow
         options.OnClose += OnRefocus;
     }
 
+    public void HowToPlay()
+    {
+        focused = false;
+        foreach (var button in buttons) button.interactable = false;
+        howToPlay.gameObject.SetActive(true);
+        howToPlay.OnClose += OnRefocus;
+    }
+
     void OnRefocus()
     {
         focused = true;
         options.OnClose -= OnRefocus;
         foreach (var button in buttons) button.interactable = true;
-
     }
 
     public void Exit()
     {
         Application.Quit();
+    }
+
+    protected override void OnInputDevicePress(bool isJoystick)
+    {
+        //throw new System.NotImplementedException();
     }
 }

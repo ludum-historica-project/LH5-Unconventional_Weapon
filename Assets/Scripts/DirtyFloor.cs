@@ -15,6 +15,7 @@ public class DirtyFloor : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        int watchdog = 10000;
         float dustDistance = 1;
         List<DustMote> spawnedPockets = new List<DustMote>();
         while (spawnedPockets.Count < dustCount)
@@ -39,6 +40,7 @@ public class DirtyFloor : MonoBehaviour
                 dustDistance = 1;
                 spawnedPockets.Add(Instantiate(dirtPacketPrefab, pos, Quaternion.identity));
             }
+            if (watchdog-- <= 0) break;
         }
 
     }
@@ -52,7 +54,7 @@ public class DirtyFloor : MonoBehaviour
     public Vector3 GetPointWithinLimits()
     {
         //return new Vector3(Random.Range(-size.x, size.x), Random.Range(-size.y, size.y)) / 2;
-        return Quaternion.AngleAxis(Random.Range(0, 360), Vector3.forward) * Vector3.up * Mathf.Pow(Random.Range(innerRadius, outerRadius) / outerRadius, 5) * outerRadius;
+        return Quaternion.AngleAxis(Random.Range(0, 360), Vector3.forward) * Vector3.up * Mathf.Lerp(innerRadius, outerRadius, Mathf.Pow(Random.Range(0f, 1), 5));
     }
 
     private void OnDrawGizmos()
